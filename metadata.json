@@ -1,0 +1,7 @@
+{
+  "name": "ReviewMine",
+  "description": "Anonymous Community Feedback for Personal Growth. See yourself through the eyes of others in a constructive, safe, and modern environment.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
