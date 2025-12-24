@@ -409,8 +409,11 @@ const Feed = ({ users, posts }: { users: UserProfile[], posts: MicroPost[] }) =>
 const Profile = ({ users, posts }: { users: UserProfile[], posts: MicroPost[] }) => {
   const { t } = useTranslation();
   const { id } = useParams<{ id: string }>();
-  const user = id === 'me' ? users.find(u => u.id === 'me') : users.find(u => u.id === id);
-  const isMe = id === 'me' || user?.id === 'me';
+  
+  // FIXED: Improved user lookup to default to current user 'me' if no ID is present
+  const userId = id || 'me';
+  const user = users.find(u => u.id === userId);
+  const isMe = userId === 'me';
 
   const [insight, setInsight] = useState<string | null>(null);
   const [loadingInsight, setLoadingInsight] = useState(false);
