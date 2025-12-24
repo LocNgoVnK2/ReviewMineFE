@@ -75,7 +75,6 @@ export const CyberInput: React.FC<{
 }> = ({ label, type = 'text', placeholder, value, onChange, onKeyDown, required, className = '' }) => {
   return (
     <div className={`space-y-2 ${className}`}>
-      {/* Set a min-height for the label container to maintain alignment in grids */}
       <div className="min-h-[14px]">
         {label && <label className="block text-[10px] mono text-white/40 uppercase tracking-widest leading-none">{label}</label>}
       </div>

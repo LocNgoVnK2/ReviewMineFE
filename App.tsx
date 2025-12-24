@@ -183,7 +183,6 @@ const Dashboard = ({ users, onUpdateUser }: { users: UserProfile[], onUpdateUser
       </header>
 
       <div className="space-y-12">
-        {/* 1. PUBLIC IDENTITY - Grid Alignment Refined */}
         <CyberCard title={t.dashboard.identity_header} subtitle={t.dashboard.identity_desc}>
           <div className="space-y-8 pt-2">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
@@ -208,7 +207,6 @@ const Dashboard = ({ users, onUpdateUser }: { users: UserProfile[], onUpdateUser
           </div>
         </CyberCard>
 
-        {/* 2. REPUTATION MANAGEMENT */}
         <CyberCard title={t.dashboard.reputation_header} subtitle={t.dashboard.reputation_desc}>
           <div className="space-y-6 pt-2">
             <p className="text-[10px] mono text-yellow-400/60 uppercase italic">{t.dashboard.domain_warning}</p>
@@ -232,7 +230,6 @@ const Dashboard = ({ users, onUpdateUser }: { users: UserProfile[], onUpdateUser
           </div>
         </CyberCard>
 
-        {/* 3. CHARACTER MODULES */}
         <CyberCard title={t.dashboard.attributes_header} subtitle={t.dashboard.attributes_desc}>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 pt-2">
             {[
@@ -410,7 +407,7 @@ const Profile = ({ users, posts }: { users: UserProfile[], posts: MicroPost[] })
   const { t } = useTranslation();
   const { id } = useParams<{ id: string }>();
   
-  // FIXED: Improved user lookup to default to current user 'me' if no ID is present
+  // Logic updated: prioritizing the 'me' node and ensuring edits are reflected
   const userId = id || 'me';
   const user = users.find(u => u.id === userId);
   const isMe = userId === 'me';
