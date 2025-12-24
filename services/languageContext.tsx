@@ -1,5 +1,5 @@
 
-import React, { createContext, useContext, useState, ReactNode } from 'react';
+import React, { createContext, useContext, useState, ReactNode, useMemo } from 'react';
 import { Language, translations } from '../translations';
 
 interface LanguageContextType {
@@ -13,11 +13,11 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 export const LanguageProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   const [language, setLanguage] = useState<Language>('en');
 
-  const value = {
+  const value = useMemo(() => ({
     language,
     setLanguage,
-    t: translations[language],
-  };
+    t: translations[language] || translations['en'],
+  }), [language]);
 
   return (
     <LanguageContext.Provider value={value}>
@@ -31,5 +31,9 @@ export const useTranslation = () => {
   if (!context) {
     throw new Error('useTranslation must be used within a LanguageProvider');
   }
-  return context;
+  // Ensure t is never undefined even if a sub-key is accessed
+  return {
+    ...context,
+    t: context.t || translations['en']
+  };
 };

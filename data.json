@@ -1,0 +1,109 @@
+
+{
+  "users": [
+    {
+      "id": "me",
+      "name": "Alex Rivera",
+      "username": "arivera_tech",
+      "avatar": "https://picsum.photos/seed/alex/200",
+      "trustScore": 98,
+      "activeDomains": ["Professional", "Communication", "Leadership", "Social"],
+      "specialization": "Cloud Infrastructure & Distributed Systems",
+      "personality": ["Analytical", "Pragmatic", "Introverted Alpha"],
+      "interests": ["Neural Networks", "Cyber-Sec", "Urban Exploration"],
+      "habits": ["Deep Work (4h blocks)", "Early Riser", "T-Shaped Learning"],
+      "reviews": [
+        { "id": "1", "domain": "Professional", "rating": 5, "comment": "Exceptional attention to detail in architecture.", "tag": "POSITIVE", "createdAt": "2024-03-20" },
+        { "id": "2", "domain": "Communication", "rating": 4, "comment": "Always clear, though can be a bit direct sometimes.", "tag": "CONSTRUCTIVE", "createdAt": "2024-03-18" },
+        { "id": "3", "domain": "Leadership", "rating": 5, "comment": "Inspires the team to push boundaries.", "tag": "POSITIVE", "createdAt": "2024-03-15" },
+        { "id": "4", "domain": "Social", "rating": 3, "comment": "Great energy but often skips the small talk.", "tag": "NEUTRAL", "createdAt": "2024-03-10" },
+        { "id": "5", "domain": "Professional", "rating": 5, "comment": "Master of high-availability setups.", "tag": "POSITIVE", "createdAt": "2024-03-05" },
+        { "id": "6", "domain": "Reliability", "rating": 5, "comment": "Uptime of 99.9% in his deliveries.", "tag": "POSITIVE", "createdAt": "2024-03-01" }
+      ],
+      "badges": ["⭐ Trusted", "🏅 Architect", "🛡️ High Uptime"],
+      "topSkills": ["System Design", "Kubernetes", "Rust"],
+      "weeklyReviews": 12
+    },
+    {
+      "id": "u2",
+      "name": "Sarah Chen",
+      "username": "schen_design",
+      "avatar": "https://picsum.photos/seed/sarah/200",
+      "trustScore": 94,
+      "activeDomains": ["Professional", "Communication", "Social"],
+      "specialization": "Visual Interaction & Brand Identity",
+      "personality": ["Creative", "Empathic", "Detail-Obsessed"],
+      "interests": ["Minimalism", "3D Motion", "Generative Art"],
+      "habits": ["Late Night Flow", "Sketching daily", "Active Listener"],
+      "reviews": [
+        { "id": "s1", "domain": "Professional", "rating": 5, "comment": "The best UI designer I've ever worked with.", "tag": "POSITIVE", "createdAt": "2024-03-22" },
+        { "id": "s2", "domain": "Communication", "rating": 5, "comment": "Explains complex design concepts with ease.", "tag": "POSITIVE", "createdAt": "2024-03-21" }
+      ],
+      "badges": ["🎨 Visualist", "✨ Pixel Perfect"],
+      "topSkills": ["UI/UX", "Branding", "Figma"],
+      "weeklyReviews": 8
+    },
+    {
+      "id": "u3",
+      "name": "Marcus Thorne",
+      "username": "mthorne_lead",
+      "avatar": "https://picsum.photos/seed/marcus/200",
+      "trustScore": 89,
+      "activeDomains": ["Leadership", "Reliability"],
+      "specialization": "Strategic Product Management",
+      "personality": ["Decisive", "Visionary", "Tough Love"],
+      "interests": ["Chess", "Economics", "History"],
+      "habits": ["Inbox Zero", "Morning Briefing", "Data-Driven Choices"],
+      "reviews": [
+        { "id": "m1", "domain": "Leadership", "rating": 4, "comment": "Can be intense, but always hits the target.", "tag": "CONSTRUCTIVE", "createdAt": "2024-03-19" }
+      ],
+      "badges": ["⚡ Fast Lane", "📈 Growth Mindset"],
+      "topSkills": ["Strategy", "Team Management"],
+      "weeklyReviews": 15
+    },
+    {
+      "id": "u4",
+      "name": "Elena Vance",
+      "username": "evance_rel",
+      "avatar": "https://picsum.photos/seed/elena/200",
+      "trustScore": 91,
+      "activeDomains": ["Reliability", "Communication"],
+      "specialization": "Quality Assurance & Support Operations",
+      "personality": ["Patient", "Thorough", "Friendly"],
+      "interests": ["Gardening", "Puzzles", "Yoga"],
+      "habits": ["Checklist obsession", "After-action reviews", "Community volunteering"],
+      "reviews": [
+        { "id": "e1", "domain": "Reliability", "rating": 5, "comment": "If Elena says it's fixed, it's fixed forever.", "tag": "POSITIVE", "createdAt": "2024-03-18" }
+      ],
+      "badges": ["🛡️ Reliable", "🤝 Supporter"],
+      "topSkills": ["QA", "Support", "Documentation"],
+      "weeklyReviews": 5
+    },
+    {
+      "id": "u5",
+      "name": "Hiroshi Tanaka",
+      "username": "htanaka_ops",
+      "avatar": "https://picsum.photos/seed/hiro/200",
+      "trustScore": 96,
+      "activeDomains": ["Reliability", "Professional"],
+      "specialization": "Cyber-Security & Site Reliability",
+      "personality": ["Calm", "Focused", "Vigilant"],
+      "interests": ["Go (Board game)", "Kendo", "Old Hardware"],
+      "habits": ["Log analysis every morning", "Zero-trust mindset", "Tea ceremonies"],
+      "reviews": [
+        { "id": "h1", "domain": "Professional", "rating": 5, "comment": "A true master of system security.", "tag": "POSITIVE", "createdAt": "2024-03-20" }
+      ],
+      "badges": ["⛩️ Zen Master", "🔒 Secure Node"],
+      "topSkills": ["SecOps", "Networking", "Linux"],
+      "weeklyReviews": 20
+    }
+  ],
+  "posts": [
+    { "id": "mp1", "authorId": "me", "authorName": "Alex Rivera", "authorAvatar": "https://picsum.photos/seed/alex/200", "content": "Just received a constructive review on my communication style. Learning to pause before replying. Growth hurts but helps! #SelfAware", "timestamp": "2h ago", "reactions": [{ "type": "👍", "count": 12 }, { "type": "🤔", "count": 4 }] },
+    { "id": "mp2", "authorId": "u2", "authorName": "Sarah Chen", "authorAvatar": "https://picsum.photos/seed/sarah/200", "content": "Building trust takes months, losing it takes seconds. Maintain your reputation protocols.", "timestamp": "5h ago", "reactions": [{ "type": "👀", "count": 22 }, { "type": "🛡️", "count": 8 }] },
+    { "id": "mp3", "authorId": "u3", "authorName": "Marcus Thorne", "authorAvatar": "https://picsum.photos/seed/marcus/200", "content": "Leadership isn't about control; it's about empowerment. Feedback is the fuel for that empowerment.", "timestamp": "1d ago", "reactions": [{ "type": "⚡", "count": 45 }] },
+    { "id": "mp4", "authorId": "u4", "authorName": "Elena Vance", "authorAvatar": "https://picsum.photos/seed/elena/200", "content": "Quality is everyone's responsibility, but starts with personal accountability. Use ReviewMine to track yours.", "timestamp": "2d ago", "reactions": [{ "type": "🛡️", "count": 10 }] },
+    { "id": "mp5", "authorId": "me", "authorName": "Alex Rivera", "authorAvatar": "https://picsum.photos/seed/alex/200", "content": "The data doesn't lie. My reliability score went up by 5% after I started documenting my API calls better.", "timestamp": "3d ago", "reactions": [{ "type": "📊", "count": 15 }] },
+    { "id": "mp6", "authorId": "me", "authorName": "Alex Rivera", "authorAvatar": "https://picsum.photos/seed/alex/200", "content": "Anyone else finding that remote-first culture requires 2x the communication effort? Insight mine for today.", "timestamp": "5d ago", "reactions": [{ "type": "💬", "count": 9 }] }
+  ]
+}

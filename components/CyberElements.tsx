@@ -69,22 +69,27 @@ export const CyberInput: React.FC<{
   placeholder?: string;
   value?: string;
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onKeyDown?: (e: React.KeyboardEvent<HTMLInputElement>) => void;
   required?: boolean;
   className?: string;
-}> = ({ label, type = 'text', placeholder, value, onChange, required, className = '' }) => {
+}> = ({ label, type = 'text', placeholder, value, onChange, onKeyDown, required, className = '' }) => {
   return (
-    <div className={`space-y-1 ${className}`}>
-      {label && <label className="block text-[10px] mono text-white/40 uppercase tracking-widest">{label}</label>}
-      <div className="relative">
+    <div className={`space-y-2 ${className}`}>
+      {/* Set a min-height for the label container to maintain alignment in grids */}
+      <div className="min-h-[14px]">
+        {label && <label className="block text-[10px] mono text-white/40 uppercase tracking-widest leading-none">{label}</label>}
+      </div>
+      <div className="relative group">
         <input
           type={type}
           placeholder={placeholder}
           value={value}
           onChange={onChange}
+          onKeyDown={onKeyDown}
           required={required}
-          className="w-full bg-white/5 border border-white/10 p-3 text-sm mono focus:border-yellow-400 focus:outline-none transition-colors placeholder:text-white/20"
+          className="w-full bg-white/5 border border-white/10 p-3 text-sm mono focus:border-yellow-400 focus:outline-none transition-all duration-300 placeholder:text-white/10"
         />
-        <div className="absolute bottom-0 left-0 w-0 h-[1px] bg-yellow-400 transition-all group-focus-within:w-full"></div>
+        <div className="absolute bottom-0 left-0 w-0 h-[1px] bg-yellow-400 transition-all duration-500 group-focus-within:w-full"></div>
       </div>
     </div>
   );

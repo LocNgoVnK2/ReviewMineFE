@@ -34,10 +34,17 @@ export interface UserProfile {
   badges?: string[];
   topSkills?: string[];
   weeklyReviews?: number;
+  specialization?: string;
+  personality?: string[];
+  interests?: string[];
+  habits?: string[];
 }
 
 export interface MicroPost {
   id: string;
+  authorId: string;
+  authorName: string;
+  authorAvatar: string;
   content: string;
   timestamp: string;
   reactions: { type: string; count: number }[];
